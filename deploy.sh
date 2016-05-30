@@ -16,6 +16,7 @@ git config --global user.email "niranjan94@yahoo.com"
 git clone "https://$GH_TOKEN@github.com/niranjan94/spa-deploy-demo.git" gh-pages
 cd gh-pages
 git checkout gh-pages
+git rm -rf ./* && rm -rf ./*
 yes | cp -rf  ../dist/* ./*
 git add .
 git commit -m "[${rev}] Updated"
